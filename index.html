@@ -1,0 +1,50 @@
+<!-- General starting at 20:47 20.06 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Disgussion</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style type="text/css">
+    body {
+      /* Fix for modal */
+      overflow-y: scroll !important;
+      padding-right: 0 !important
+    }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script> 
+  <script src="script.js"></script>
+</head>
+<body>
+  <div class="modal fade" id="delete-modal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Are you sure?</h4>
+        </div>
+        <div class="modal-body">
+          All your posts wont be returned
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" onclick="clearData()" data-dismiss="modal">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+	<div class="container-fluid bg-primary clearfix m-0 p-0" id="logo">
+		<h1 class="display-1 p-4 text-light float-left">Disgussion</h1>
+    <button type="button" title="Create new topic" data-toggle="tooltip" data-placement="bottom" class="btn btn-light text-primary float-right m-5" onclick="openTopicForm()">
+      <h5 class="display-4 py-0 px-3 m-0">+</h5>
+    </button>
+    <button type="button" title="Delete all posts" class="btn btn-light text-primary float-right m-5" onclick="openDeleteModal()" data-toggle="modal, tooltip" data-placement="bottom" data-target="#delete-modal">
+      <h5 class="display-4 py-0 px-3 m-0">&times;</h5>
+    </button>
+	</div>
+	<div class="container my-4">
+	</div>
+</body>
+</html>
